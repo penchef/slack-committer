@@ -22,10 +22,10 @@ jobs:
         id: slack-committer
         uses: penchef/slack-committer@v1.2
         with:
+          fallback: "XYZXYZXYZ"
           user-mapping: >
             {
               "Penchef": "UUSAQBVDZ",
-              "fallback": "XYZXYZXYZ"
             }
       - name: Notify user
         # choose whatever notify action suits you, using voxmedia/github-action-slack-notify-build as an example
