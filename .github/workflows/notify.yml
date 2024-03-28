@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Resolve slack committer
         id: slack-committer
-        uses: penchef/slack-committer@v1.2
+        uses: livlyhood/slack-committer@main
         with:
           fallback: "XYZXYZXYZ"
           user-mapping: >
