@@ -15,7 +15,7 @@ jobs:
         id: slack-committer
         uses: livelyhood/slack-committer@main
         with:
-          user-mapping: ${{ steps.read-users.outputs.users }}
+          user-mapping: ${{ fromJSON(steps.read-users.outputs.users) }}
       - run: echo ${{ steps.slack-committer.outputs.username }}
       - name: Resolve slack committer
         id: slack-committer-string
