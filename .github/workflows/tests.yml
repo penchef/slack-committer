@@ -13,13 +13,13 @@ jobs:
         run: echo "users=$(jq . users.json) >> $GITHUB_OUTPUT"
       - name: Resolve slack committer with users.json
         id: slack-committer
-        uses: livlyhood/slack-committer@main
+        uses: livelyhood/slack-committer@main
         with:
           user-mapping: ${{ steps.read-users.outputs.users }}
       - run: echo ${{ steps.slack-committer.outputs.username }}
       - name: Resolve slack committer
         id: slack-committer-string
-        uses: livlyhood/slack-committer@main
+        uses: livelyhood/slack-committer@main
         with:
           user-mapping: >
             {
